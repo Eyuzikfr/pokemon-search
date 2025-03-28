@@ -30,6 +30,19 @@ const fetchData = async (pokemon) => {
   }
 };
 
+const getContrastColor = (bgColor) => {
+  // Convert hex to RGB
+  const r = parseInt(bgColor.substring(1, 3), 16);
+  const g = parseInt(bgColor.substring(3, 5), 16);
+  const b = parseInt(bgColor.substring(5, 7), 16);
+
+  // Calculate luminance
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+  // Return black for light colors, white for dark colors
+  return luminance > 0.5 ? "#000000" : "#FFFFFF";
+};
+
 const showPokemon = (pokemonData) => {
   pokemonNameEl.textContent = `${pokemonData.name.toUpperCase()}`;
   pokemonIdEl.textContent = `${pokemonData.id}`;
@@ -43,7 +56,11 @@ const showPokemon = (pokemonData) => {
     .join("");
   const typeEl = document.querySelectorAll(".type-chip");
   typeEl.forEach((type, index) => {
-    type.style.background = `${colours[pokemonData.types[index].type.name]}`;
+    const bgColor = colours[pokemonData.types[index].type.name];
+    const textColor = getContrastColor(bgColor);
+    console.log(textColor);
+    type.style.background = `${bgColor}`;
+    type.style.color = `${textColor}`;
   });
   hpEl.textContent = `${pokemonData.stats[0].base_stat}`;
   attackEl.textContent = `${pokemonData.stats[1].base_stat}`;
