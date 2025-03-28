@@ -1,0 +1,17 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#types {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.type-chip {
+  border-radius: 20px;
+  padding: 0.6rem 1.8rem;
+}

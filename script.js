@@ -1,3 +1,5 @@
+import colours from "./typeColors.js";
+
 // access dom nodes
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
@@ -34,10 +36,15 @@ const showPokemon = (pokemonData) => {
   imgContainer.innerHTML = `<img id="sprite" src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}'s image" />`;
   weightEl.textContent = `Weight: ${pokemonData.weight}`;
   heightEl.textContent = `Height: ${pokemonData.height}`;
-  console.log(pokemonData.types);
-  typesEl.innerHTML = pokemonData.types.map(
-    (slot) => `<span>${slot.type.name.toUpperCase()}</span>`
-  );
+  typesEl.innerHTML = pokemonData.types
+    .map(
+      (slot) => `<span class="type-chip">${slot.type.name.toUpperCase()}</span>`
+    )
+    .join("");
+  const typeEl = document.querySelectorAll(".type-chip");
+  typeEl.forEach((type, index) => {
+    type.style.background = `${colours[pokemonData.types[index].type.name]}`;
+  });
   hpEl.textContent = `${pokemonData.stats[0].base_stat}`;
   attackEl.textContent = `${pokemonData.stats[1].base_stat}`;
   defenseEl.textContent = `${pokemonData.stats[2].base_stat}`;
