@@ -24,10 +24,10 @@ main {
   border-radius: 7px;
   padding: 4.5rem 3.6rem;
   display: flex;
-  box-shadow: 1px 2px 25px 2px rgba(246, 244, 244, 0.2);
+  box-shadow: 1px 2px 20px 2px rgba(246, 244, 244, 0.1);
   flex-direction: column;
   justify-content: center;
-  background-color: #4f4f4f;
+  background-color: #454545;
 }
 
 .search-container {
