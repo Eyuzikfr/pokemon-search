@@ -87,7 +87,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 0 4.5rem;
-  color: #ffffff;
+  color: #fffdf5;
 }
 
 .name-id {
@@ -177,4 +177,35 @@ main {
 
 .stat-icon {
   width: 2.4rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: #454545;
+  }
+  main {
+    box-shadow: none;
+  }
+  .logo {
+    width: 80vw;
+    height: 20vw;
+  }
+  .search-container {
+    position: relative;
+  }
+  .search-container > input {
+    width: 80vw;
+  }
+  #search-button {
+    position: absolute;
+    top: 0;
+    left: 71%;
+  }
+  #stats-table {
+    width: 90vw;
+  }
+  #stats-table > thead,
+  #stats-table > tbody {
+    width: 80vw;
+  }
 }
