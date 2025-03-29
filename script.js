@@ -40,7 +40,7 @@ const getContrastColor = (bgColor) => {
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
   // Return black for light colors, white for dark colors
-  return luminance > 0.5 ? "#000000" : "#FFFFFF";
+  return luminance > 0.65 ? "#232323" : "#fffbed";
 };
 
 const showPokemon = (pokemonData) => {
