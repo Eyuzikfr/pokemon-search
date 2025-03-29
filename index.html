@@ -35,18 +35,77 @@
           <div id="pokemon-name"></div>
           <div id="pokemon-id"></div>
         </div>
+
         <div class="weight-height">
           <div id="weight"></div>
           <div id="height"></div>
         </div>
         <div id="img-container"></div>
         <div id="types"></div>
-        <div id="hp"></div>
-        <div id="attack"></div>
-        <div id="defense"></div>
-        <div id="special-attack"></div>
-        <div id="special-defense"></div>
-        <div id="speed"></div>
+        <table id="stats-table">
+          <thead>
+            <tr>
+              <th class="table-head">Base</th>
+              <th class="table-head">Stats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="data-row">
+              <td class="table-data">
+                HP
+                <img src="./images/heart.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="hp"></div>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="table-data">
+                ATK
+                <img src="./images/sword.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="attack"></div>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="table-data">
+                DEF
+                <img src="./images/defence.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="defense"></div>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="table-data">
+                SP. ATK
+                <img src="./images/thunder.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="special-attack"></div>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="table-data">
+                SP. DEF
+                <img src="./images/shield.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="special-defense"></div>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="table-data">
+                SPEED
+                <img src="./images/footprint.png" class="stat-icon" alt="" />
+              </td>
+              <td class="table-data">
+                <div id="speed"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <script type="module" src="script.js"></script>
     </main>
