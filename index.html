@@ -3,30 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="img/png" href="./images/pokeball.png" />
-    <title>Pokemon Search</title>
+    <title>PokeSearch</title>
   </head>
   <body>
-    <label for="search-input"
-      >Search
-      <input type="text" id="search-input" required />
-    </label>
-    <button id="search-button">Search</button>
-    <div id="pokemon-name"></div>
-    <div id="pokemon-id"></div>
-    <div id="img-container"></div>
-    <div id="weight"></div>
-    <div id="height"></div>
-    <div id="types"></div>
-    <div id="hp"></div>
-    <div id="attack"></div>
-    <div id="defense"></div>
-    <div id="special-attack"></div>
-    <div id="special-defense"></div>
-    <div id="speed"></div>
-
-    <script type="module" src="script.js"></script>
+    <header>
+      <img class="logo" src="./images/logo.png" alt="Pokesearch logo" />
+    </header>
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Enter Pokemon Name or ID"
+          required
+        />
+        <button id="search-button">
+          <img src="images/searchFI.svg" alt="Search" />
+        </button>
+      </div>
+      <div class="pokemon-info">
+        <div class="name-id">
+          <div id="pokemon-name"></div>
+          <div id="pokemon-id"></div>
+        </div>
+        <div class="weight-height">
+          <div id="weight"></div>
+          <div id="height"></div>
+        </div>
+        <div id="img-container"></div>
+        <div id="types"></div>
+        <div id="hp"></div>
+        <div id="attack"></div>
+        <div id="defense"></div>
+        <div id="special-attack"></div>
+        <div id="special-defense"></div>
+        <div id="speed"></div>
+      </div>
+      <script type="module" src="script.js"></script>
+    </main>
   </body>
 </html>

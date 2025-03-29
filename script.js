@@ -45,9 +45,9 @@ const getContrastColor = (bgColor) => {
 
 const showPokemon = (pokemonData) => {
   pokemonNameEl.textContent = `${pokemonData.name.toUpperCase()}`;
-  pokemonIdEl.textContent = `${pokemonData.id}`;
+  pokemonIdEl.textContent = `#${pokemonData.id}`;
   imgContainer.innerHTML = `<img id="sprite" src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}'s image" />`;
-  weightEl.textContent = `Weight: ${pokemonData.weight}`;
+  weightEl.textContent = `Weight: ${pokemonData.weight},`;
   heightEl.textContent = `Height: ${pokemonData.height}`;
   typesEl.innerHTML = pokemonData.types
     .map(
